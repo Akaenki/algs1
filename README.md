@@ -3,4 +3,5 @@
 Algorithm Part I:
 
 - [x] Percolation: 96/100 (Memory exceed) 
-- [ ] Deque and Randomized Queue
+- [x] Deque and Randomized Queue: 100/100
+- [ ] Collinear Points:
