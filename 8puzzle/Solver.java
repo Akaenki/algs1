@@ -2,16 +2,15 @@ import edu.princeton.cs.algs4.MinPQ;
 import edu.princeton.cs.algs4.Stack;
 
 public class Solver {
-    private MinPQ<SearchNode> fringe, twinfringe;
     private SearchNode goal;
     private boolean isSolvable;
 
     public Solver(Board initial){
         if(initial == null) throw new IllegalArgumentException();
-        fringe = new MinPQ<>(); twinfringe = new MinPQ<>();
+        MinPQ<SearchNode> fringe = new MinPQ<>(), twinfringe = new MinPQ<>();
         SearchNode cur = new SearchNode(initial, null, 0),
                 tcur = new SearchNode(initial.twin(), null, 0);
-        while (!cur.board.isGoal() && tcur.board.isGoal()) {
+        while (!cur.board.isGoal() && !tcur.board.isGoal()) {
             for (Board next : cur.board.neighbors()) {
                 if (cur.previous == null || !next.equals(cur.previous.board)) {
                     fringe.insert(new SearchNode(next, cur, cur.totalMoves + 1));
@@ -26,7 +25,7 @@ public class Solver {
         }
 
         if(cur.board.isGoal()){ goal = cur; isSolvable = true; }
-        if(tcur.board.isGoal()){ goal = tcur; isSolvable = false; }
+        else { goal = tcur; isSolvable = false; }
     }
 
     public boolean isSolvable(){

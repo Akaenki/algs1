@@ -2,7 +2,7 @@ import edu.princeton.cs.algs4.In;
 import edu.princeton.cs.algs4.StdOut;
 public class Test {
     public static void main(String[] args) {
-        In in = new In("puzzle2x2-06.txt");
+        In in = new In("puzzle4x4-80.txt");
         int N = in.readInt();
         int[][] tiles = new int[N][N];
         for (int i = 0; i < N; i++) {
@@ -16,7 +16,7 @@ public class Test {
         Solver solver = new Solver(initial);
         StdOut.println("Minimum number of moves = " + solver.moves());
         for (Board ws : solver.solution()) {
-            //StdOut.println(ws);
+            StdOut.println(ws);
         }
     }
 }
