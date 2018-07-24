@@ -2,7 +2,8 @@
 
 Algorithm Part I:
 
-- [x] Percolation: 96/100 (Memory exceed) 
+- [ ] Percolation: 96/100 (Memory exceed) 
 - [x] Deque and Randomized Queue: 100/100
 - [x] Collinear Points: 100/100
-- [ ] Puzzle: 
+- [x] Puzzle: 100/100
+
