@@ -6,4 +6,5 @@ Algorithm Part I:
 - [x] Deque and Randomized Queue: 100/100
 - [x] Collinear Points: 100/100
 - [x] Puzzle: 100/100
+- [x] KdTree: 100/100
 
